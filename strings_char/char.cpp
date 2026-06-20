@@ -1,5 +1,3 @@
-//34. Find First and Last Position of Element in Sorted Array
-
 #include<iostream>
 #include<vector>
 using namespace std;
