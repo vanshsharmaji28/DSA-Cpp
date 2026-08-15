@@ -7,6 +7,7 @@ class car{
     string color;
 
 public:
+    
    car(string nameVal,string modelVal,string colorVal){
 
      cout<<"constrctor is called and created ...."<<endl;
@@ -24,6 +25,9 @@ public:
 
 int main() {
      car c1("alto","k10","red");
+
+    car *jeep =new car("bolero","mhawk","white");
+
      cout<<"car name == "<<c1.getName()<<endl;
     return 0;
 }
