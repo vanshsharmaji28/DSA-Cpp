@@ -37,3 +37,55 @@ node*remove(node*head , int n){
 
 
 }
+
+node*brute(node*head, int n){
+    node*temp=head;
+    int count =0;
+    while(temp!=nullptr){
+        count++;
+        temp=temp->next;
+    }
+    if(count==n){
+        node*del=head;
+        head=head->next;
+        delete del;
+        return head;
+    }
+
+    int index= count-n;
+    temp=head;
+
+    while(temp!=nullptr){
+        index--;
+        if(index==0){
+            break;
+        }
+        temp=temp->next;
+    }
+    node*del=temp->next;
+    temp->next=temp->next->next;
+    delete del;
+    return head;
+
+}
+
+node*optimal(node*head ,int n){
+    node*fast=head;
+    node*slow=head;
+
+    for(int i=0;i<n;i++){
+        
+        fast=fast->next;
+        slow=head;
+        
+    }
+    while(fast!=nullptr ){
+        fast=fast->next;
+        slow=slow->next;
+    }
+    node*del=slow->next;
+    slow->next=slow->next->next;
+    delete del;
+    return head;
+    
+}
