@@ -13,8 +13,8 @@ class node{
 };
 
 int main() {
-  
-    node*head=new node(10);
+  int val;
+    node*head=new node(val);
     head->next=new node(20);
     head->next->next=new node(30);
 

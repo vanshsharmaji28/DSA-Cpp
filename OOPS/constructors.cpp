@@ -11,9 +11,9 @@ public:
    car(string nameVal,string modelVal,string colorVal){
 
      cout<<"constrctor is called and created ...."<<endl;
-     name=nameVal;
-     color=colorVal;
-     model=modelVal;
+     this->name=nameVal;
+     this->color=colorVal;
+    this-> model=modelVal;
    }
 
    string getName(){
@@ -25,6 +25,8 @@ public:
 
 int main() {
      car c1("alto","k10","red");
+
+     car c2(c1);
 
     car *jeep =new car("bolero","mhawk","white");
 

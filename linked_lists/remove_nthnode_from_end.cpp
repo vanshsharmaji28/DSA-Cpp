@@ -79,9 +79,19 @@ node*optimal(node*head ,int n){
         slow=head;
         
     }
-    while(fast!=nullptr ){
+
+
+
+    while(fast->next!=nullptr ){
         fast=fast->next;
         slow=slow->next;
+    }
+    if(fast==nullptr){
+        node*del=head;
+        head=head->next;
+        delete del;
+        return head;
+        
     }
     node*del=slow->next;
     slow->next=slow->next->next;
