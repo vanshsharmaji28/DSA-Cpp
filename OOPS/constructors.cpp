@@ -13,7 +13,7 @@ public:
      cout<<"constrctor is called and created ...."<<endl;
      this->name=nameVal;
      this->color=colorVal;
-    this-> model=modelVal;
+     this-> model=modelVal;
    }
 
    string getName(){
